@@ -1,21 +1,19 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Provider } from 'react-redux';
-import store from './redux/store';
+
 import App from './App.jsx'
 import './index.css'
-
-import { persistor } from './redux/store'; 
-import { PersistGate } from 'redux-persist/integration/react';
+import { ReactTogether } from 'react-together';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+     <ReactTogether
+    sessionParams={{
+      appId: 'com.gmail.lukashliliana.microverse',    // Замените на ваш appId
+      apiKey: '1rJF6GBptzKoxylK9aMEKsJxlF6a9iAvCB434p27a',  // Замените на ваш apiKey
+    }}
+  >
         <App />
-      </PersistGate>
-    </Provider> 
+      </ReactTogether>
   </StrictMode>,
 )
-
-
