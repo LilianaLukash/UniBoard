@@ -1,0 +1,25 @@
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
+  width: 280px;
+  font-size: 16px; /* Крупнее текст */
+  font-weight: bold;
+}
+.button {
+  position: absolute;
+  top: 30%;
+  right: 10px;
+  border: 1px solid rgb(62, 62, 62);
+  background-color: rgb(199, 195, 195);
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90px;
+  cursor: pointer;
+}
